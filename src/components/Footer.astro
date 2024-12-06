@@ -1,0 +1,55 @@
+---
+import type { Props } from "@astrojs/starlight/props";
+import Default from "@astrojs/starlight/components/Footer.astro";
+const isHomepage = Astro.props.slug === '';
+---
+
+{
+  isHomepage ? (
+    <section
+      class="not-content"
+      style="display: flex; justify-content: center;"
+    >
+      <div class="not-content">
+        <div class="not-content">
+          <div class="not-content">
+            <div class="not-content">
+              <p class="not-content">
+                Copyright &copy; 2024.Company name All rights reserved.
+                <a style="font-size: 13px;" target="_blank" href="#">
+                  琦木
+                </a>
+              </p>
+              <div class="not-content">
+                <img
+                  src="/beian.png"
+                  alt=""
+                  style="width: 14px;height: 16px;"
+                />
+                <a
+                  style="font-size: 12px;margin-right: 15px;"
+                  href="https://beian.mps.gov.cn/#/query/webSearch?code=43010402001935"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  湘公网安备 43010402001935号
+                </a>
+                <a
+                  style="font-size: 12px;"
+                  href="https://beian.miit.gov.cn/"
+                  target="_blank"
+                >
+                  湘ICP备2024068770号-2
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  ) : (
+    <Default {...Astro.props}>
+      <slot />
+    </Default>
+  )
+}

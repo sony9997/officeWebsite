@@ -1,0 +1,319 @@
+openapi: 3.0.1
+info:
+  title: API服务
+  description: ''
+  version: 1.0.0
+tags:
+  - name: Runway任务管理
+paths:
+  /api/runway/add:
+    post:
+      summary: 发起新任务
+      deprecated: false
+      description: ''
+      operationId: addUsingPOST_1
+      tags:
+        - Runway任务管理
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddRunwayTaskDTO'
+            example: ''
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema: &ref_0
+                $ref: '#/components/schemas/Result%C2%ABRunwayTaskVO%C2%BB'
+          headers: {}
+        '201':
+          description: Created
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+        '401':
+          description: Unauthorized
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+        '403':
+          description: Forbidden
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+        '404':
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - apikey-header-Authorization: []
+  /api/runway/getTask:
+    get:
+      summary: 获取任务信息
+      deprecated: false
+      description: ''
+      operationId: getTaskUsingGET
+      tags:
+        - Runway任务管理
+      parameters:
+        - name: taskId
+          in: query
+          description: taskId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema: *ref_0
+          headers: {}
+        '401':
+          description: Unauthorized
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+        '403':
+          description: Forbidden
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+        '404':
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - apikey-header-Authorization: []
+components:
+  schemas:
+    AddRunwayTaskDTO:
+      title: AddRunwayTaskDTO
+      required:
+        - images
+        - ratio
+        - seconds
+        - taskType
+      type: object
+      properties:
+        callbackUrl:
+          type: string
+          description: 回调通知地址
+          examples:
+            - http://baidu.com
+        images:
+          type: array
+          description: 图片资源信息
+          items:
+            $ref: '#/components/schemas/AddRunwayTaskImageDTO'
+        ratio:
+          type: string
+          description: 图片宽度与高度之比，16:9,9:16
+          examples:
+            - '16:9'
+        seconds:
+          type: integer
+          description: 视频时长，5 或 10
+          format: int32
+          examples:
+            - 10
+        taskType:
+          type: string
+          description: 任务类型，gen3a_turbo,gen3a,gen2
+          examples:
+            - gen3a_turbo
+        textPrompt:
+          maxLength: 2000
+          minLength: 0
+          type: string
+          description: 提示词
+      description: 添加Runway任务参数
+    AddRunwayTaskImageDTO:
+      title: AddRunwayTaskImageDTO
+      required:
+        - image
+      type: object
+      properties:
+        frameIndex:
+          type: integer
+          description: 图片索引，第一张为0，最后一张为1
+          format: int32
+          examples:
+            - 0
+        image:
+          type: string
+          description: 图片地址
+          examples:
+            - http://baidu.com
+      description: 添加Runway任务参数之图片
+    Result«RunwayTaskVO»:
+      title: Result«RunwayTaskVO»
+      required:
+        - code
+        - success
+      type: object
+      properties:
+        code:
+          type: integer
+          description: 返回结果状态码，0为成功，非0为失败
+          format: int32
+          examples:
+            - 0
+        message:
+          type: string
+          description: 返回结果说明信息
+          examples:
+            - 执行成功
+        result:
+          description: 返回结果数据
+          $ref: '#/components/schemas/RunwayTaskVO'
+        success:
+          type: boolean
+          description: 是否成功标志
+          examples:
+            - true
+        timestamp:
+          type: integer
+          description: 返回的时间戳
+          format: int64
+      description: 接口调用返回结果
+    RunwayTaskVO:
+      title: RunwayTaskVO
+      required:
+        - id
+        - images
+        - ratio
+        - seconds
+        - taskStatusCode
+        - taskType
+      type: object
+      properties:
+        callbackUrl:
+          type: string
+          description: 回调通知地址
+          examples:
+            - http://baidu.com
+        createdTime:
+          type: string
+          description: 创建时间
+          examples:
+            - yyyy-MM-dd HH:mm:ss
+        error:
+          type: string
+          description: 错误信息
+        id:
+          type: string
+          description: Runway任务ID
+          examples:
+            - '123456'
+        images:
+          type: array
+          description: 图片资源信息
+          items:
+            $ref: '#/components/schemas/RunwayTaskImageVO'
+        modifiedTime:
+          type: string
+          description: 修改时间
+          examples:
+            - yyyy-MM-dd HH:mm:ss
+        ratio:
+          type: string
+          description: 图片宽度与高度之比，16:9,9:16
+          examples:
+            - '16:9'
+        seconds:
+          type: integer
+          description: 视频时长，5 或 10
+          format: int32
+          examples:
+            - 10
+        taskStatusCode:
+          type: integer
+          description: 任务状态，0：新增；1：排队中；2：视频制作中；3：视频制作成功；4：视频制作失败
+          format: int32
+          examples:
+            - 0
+        taskType:
+          type: string
+          description: 任务类型，gen3a_turbo,gen3a,gen2
+          examples:
+            - gen3a_turbo
+        textPrompt:
+          type: string
+          description: 提示词
+          examples:
+            - fly
+        videoUrl:
+          type: string
+          description: 视频下载地址
+          examples:
+            - http://baidu.com
+      description: Runway任务信息
+    RunwayTaskImageVO:
+      title: RunwayTaskImageVO
+      required:
+        - imageActual
+        - imageOrg
+        - taskId
+      type: object
+      properties:
+        createdTime:
+          type: string
+          description: 创建时间
+          examples:
+            - yyyy-MM-dd HH:mm:ss
+        frameIndex:
+          type: integer
+          description: 图片索引，第一张为0，最后一张为1
+          format: int32
+          examples:
+            - 0
+        imageActual:
+          type: string
+          description: 实际上传的图片地址
+        imageOrg:
+          type: string
+          description: 原始图片地址
+        modifiedTime:
+          type: string
+          description: 修改时间
+          examples:
+            - yyyy-MM-dd HH:mm:ss
+        taskId:
+          type: string
+          description: Runway任务ID
+          examples:
+            - '123456'
+      description: Runway任务资源信息
+  securitySchemes:
+    apikey-header-Authorization:
+      type: apiKey
+      in: header
+      name: Authorization
+servers: []
