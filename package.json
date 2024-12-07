@@ -14,7 +14,9 @@
     "@astrojs/starlight-docsearch": "^0.3.0",
     "astro": "^4.16.10",
     "openapi-types": "^7.2.3",
+    "search-insights": "^1.10.0",
     "sharp": "^0.32.5",
-    "starlight-openapi": "^0.8.3"
+    "starlight-openapi": "^0.8.3",
+    "typescript": "^4.9.4"
   }
 }

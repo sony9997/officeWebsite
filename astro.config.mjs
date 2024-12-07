@@ -10,8 +10,8 @@ export default defineConfig({
 			plugins: [
 				starlightOpenAPI([
 				  {
-					base: 'api/runway',
-					label: 'Runway API',
+					base: '/apidocs/',
+					label: 'API文档',
 					schema:
 					  './src/content/schemas/api-service.yaml',
 				  },
@@ -30,21 +30,26 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: '公司介绍',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: '公司介绍', slug: 'introduce' },
-					],
+					slug: 'introduce',
 				},
 				{
 					label: '服务',
-					autogenerate: { directory: 'services' },
-				},
-				{ 
-					label: 'API文档',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						...openAPISidebarGroups,
-					]
+						'services/overview',
+						'services/softdev',
+						'services/ai',
+						'services/mobile',
+						'services/op',
+					],
+				},
+				{
+					label: '产品',
+					autogenerate: { directory: 'products' },
+				},
+				...openAPISidebarGroups,
+				{
+					label: '捐赠',
+					slug: 'donate',
 				},
 			],
 			components: {

@@ -1,36 +1,33 @@
 ---
 title: 欢迎来到琦木信息科技官网
-description: Get started building your docs site with Starlight.
+description: 让琦木为您创建非凡的应用
 template: splash
 hero:
-  tagline: 让琦木为您创建非凡的应用!
+  tagline: 让琦木为您提供非凡的服务和创建有价值的应用!
   image:
     file: ../../assets/houston.png
   actions:
     - text: 公司介绍
       link: /introduce/
       icon: right-arrow
-    - text: 产品介绍
-      link: /products/index/
+    - text: 服务介绍
+      link: /services/overview/
       icon: external
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid,LinkCard } from '@astrojs/starlight/components';
 
-## Next steps
+## 快速开始
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="琦木工具小程序" icon="star" >
+		马上了解[琦木工具小程序](/products/small/)有哪些功能。
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="API服务" icon="sun">
+		马上了解有哪些[API服务](/products/api/)
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="阅读API接口文档" icon="open-book">
+		详细内容请移步 [API接口文档](/apidocs/).
 	</Card>
 </CardGrid>
