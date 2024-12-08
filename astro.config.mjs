@@ -19,6 +19,7 @@ export default defineConfig({
 			],
 			title: 'QIMU',
 			description: '官网',
+			defaultLocale: 'zh-cn',
 			logo: {
 				src: './public/favicon.svg'
 			},
