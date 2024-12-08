@@ -12,11 +12,14 @@
   "dependencies": {
     "@astrojs/starlight": "^0.29.2",
     "@astrojs/starlight-docsearch": "^0.3.0",
+    "@hideoo/starlight-plugins-docs-components": "^0.2.2",
     "astro": "^4.16.10",
     "openapi-types": "^7.2.3",
     "search-insights": "^1.10.0",
     "sharp": "^0.32.5",
     "starlight-openapi": "^0.8.3",
+    "starlight-showcases": "^0.2.0",
+    "starlight-theme-catppuccin": "^1.0.3",
     "typescript": "^4.9.4"
   }
 }

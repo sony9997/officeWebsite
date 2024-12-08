@@ -1,11 +1,6 @@
 ---
 title: Saas软件开发
-description: A reference page in my new Starlight docs site.
+description: 描述软服务开发
 ---
 
-Reference pages are ideal for outlining how things work in terse and clear terms.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
-
-## Further reading
-
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+基于客户的个性化需求，基于微服务的设计理念，开发各种Saas软件。

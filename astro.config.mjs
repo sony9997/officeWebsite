@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import starlightOpenAPI, { openAPISidebarGroups } from 'starlight-openapi'
+import starlightOpenAPI, { openAPISidebarGroups } from 'starlight-openapi';
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,7 +17,7 @@ export default defineConfig({
 				  },
 				]),
 			],
-			title: 'QimuInfo',
+			title: 'QIMU',
 			description: '官网',
 			logo: {
 				src: './public/favicon.svg'
@@ -39,7 +39,9 @@ export default defineConfig({
 						'services/softdev',
 						'services/ai',
 						'services/mobile',
-						'services/op',
+						'services/cloud_native',
+						'services/bigdata',
+						'services/blockchain',
 					],
 				},
 				{
