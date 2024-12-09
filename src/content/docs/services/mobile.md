@@ -1,11 +1,11 @@
 ---
 title: 移动应用开发
-description: A reference page in my new Starlight docs site.
+description: 描述移动应用开发涉及的范围
 ---
+公司能够开发的移动应用主要包括以下几种类型：
 
-Reference pages are ideal for outlining how things work in terse and clear terms.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
+- **安卓应用**：为安卓设备开发高性能的本地应用，提供流畅的用户体验。
+- **微信小程序**：开发适用于微信平台的小程序，方便用户在微信内快速访问和使用。
+- **抖音小程序**：为抖音平台开发小程序，帮助品牌在短视频平台上与用户互动。
 
-## Further reading
-
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+我们致力于为客户提供优质的移动应用解决方案，满足不同平台的需求。

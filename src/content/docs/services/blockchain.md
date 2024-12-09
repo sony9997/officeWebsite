@@ -1,11 +1,43 @@
 ---
 title: 区块链应用开发
-description: A reference page in my new Starlight docs site.
+description: 介绍公司可以提供的区块链开发服务
 ---
 
-Reference pages are ideal for outlining how things work in terse and clear terms.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
 
-## Further reading
+公司专注于提供基于 Move 语言的区块链开发服务，特别是在 SUI 币方面的智能合约开发。我们的团队拥有丰富的经验，能够帮助客户设计、开发和部署高效、安全的智能合约，以满足不同的业务需求。
 
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+## 1. SUI 币智能合约开发
+
+SUI 币是基于 Move 语言构建的高性能区块链资产。我们提供以下服务：
+
+- **智能合约设计**：根据客户需求设计智能合约的结构和功能。
+- **合约开发**：使用 Move 语言编写高效的智能合约，确保其安全性和可扩展性。
+- **合约测试**：进行全面的单元测试和集成测试，确保合约在不同场景下的稳定性。
+- **合约部署**：将智能合约部署到 SUI 区块链上，并提供后续的维护和支持。
+
+## 2. 案例展示
+
+我们在 GitHub 上有一个示例项目，展示了如何使用 Move 语言开发 SUI 币的智能合约。该项目名为 **Virtual Bank**，主要用于货币兑换。
+
+- **GitHub 地址**: [Virtual Bank](https://github.com/sony9997/virtualbank)
+
+[![Virtual Bank](https://www.vantageasia.com/wp-content/uploads/2018/05/Bitcoin.jpg)](https://github.com/sony9997/virtualbank)
+
+### 项目说明
+
+该项目实现了一个虚拟银行系统，用户可以在其中交换 SUI 币。主要功能包括：
+
+- 初始化银行
+- 设置汇率
+- 添加和提取币种
+- 进行币种兑换
+
+以下是项目中的一些关键功能：
+
+- **初始化银行**：设置初始币种和汇率。
+- **币种兑换**：根据设定的汇率进行不同币种之间的兑换。
+
+![SUI 币](https://pic.rmb.bdstatic.com/bjh/down/4e7c1f2775a9aa84e4cbd5f25298cf83.jpeg)
+
+
+我们致力于为客户提供高质量的区块链开发服务，帮助他们在快速发展的区块链领域中取得成功。如果您对我们的服务感兴趣，欢迎与我们联系以获取更多信息。
