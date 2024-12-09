@@ -1,11 +1,51 @@
 ---
-title: 琦木工具小程序
-description: A reference page in my new Starlight docs site.
+title: 琦木工具箱微信小程序
+description: 介绍琦木工具箱微信小程序的功能和特点。
 ---
 
-Reference pages are ideal for outlining how things work in terse and clear terms.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
 
-## Further reading
+琦木工具箱微信小程序是一款集成了多种实用功能的便捷工具箱，旨在为用户提供高效、智能的生活和工作解决方案。小程序主要分为“生活”和“AI”两大板块，每个板块包含多个实用工具箱，满足用户的不同需求。
 
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+### 生活板块
+
+生活板块提供了多种实用工具箱，帮助用户简化日常生活中的各种任务。
+
+#### 1. 生成证件照
+
+生成证件照工具箱可以帮助用户快速生成符合各种证件要求的照片，包括身份证、护照等。
+
+- **功能特点**：
+  - 支持多种证件类型选择。
+  - 自动调整照片尺寸和比例。
+  - 提供多种背景色选择。
+  - 支持照片预览和高清保存。
+
+#### 2. 去视频水印
+
+去图片水印工具箱可以帮助用户轻松去除图片中的水印，恢复图片的原始清晰度。
+
+- **功能特点**：
+  - 支持多种平台的视频解析。
+  - 自动检测并去除水印。
+  - 提供下载封面和内容的功能。
+  - 支持视频或者图集。
+
+### AI板块
+
+AI板块提供了一系列智能工具箱，帮助用户提升工作效率和创造力。
+
+#### 1. 智能对话（类似ChatGPT）
+
+智能对话工具箱是一个强大的AI助手，能够回答用户的问题、提供信息和建议，类似于ChatGPT的功能。
+
+- **功能特点**：
+  - 支持自然语言处理和对话。
+  - 支持多轮对话和上下文记忆。
+
+### 小程序二维码
+
+扫描下方二维码即可下载并使用琦木工具箱微信小程序：
+
+![琦木工具箱微信小程序二维码](../../..//assets/small.jpg "琦木工具箱微信小程序二维码")
+
+通过琦木工具箱微信小程序，您可以享受到便捷的生活服务和强大的AI功能，提升您的生活质量。如有任何问题或建议，请随时联系我。

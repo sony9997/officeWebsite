@@ -6,6 +6,69 @@ info:
     <a href="https://apifox.com/apidoc/shared-c060f0ae-ed4a-41e6-94e9-e00418dda36b" target="_blank">Apifox版本的API文档</a>得到更好的阅读体验，并进行在线调试。
   version: 1.0.0
 paths:
+  /uniapp-service/register:
+    post:
+      summary: 用户注册
+      deprecated: false
+      description: ''
+      operationId: registerUsingPOST
+      tags:
+        - 用户管理
+      parameters:
+        - name: Authorization
+          in: header
+          description: ''
+          example: sk-12345678abcdefg
+          schema:
+            type: string
+            default: sk-12345678abcdefg
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserRegisterDTO'
+            example: ''
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Result%C2%ABUserRegisterVO%C2%BB'
+          headers: {}
+        '201':
+          description: Created
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+        '401':
+          description: Unauthorized
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+        '403':
+          description: Forbidden
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+        '404':
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security: []
   /uniapp-service/api/idcard/addBg:
     post:
       summary: 生成身份证照片
@@ -241,6 +304,139 @@ paths:
       
 components:
   schemas:
+    Result«UserRegisterVO»:
+      title: Result«UserRegisterVO»
+      required:
+        - code
+        - success
+      type: object
+      properties:
+        code:
+          type: integer
+          description: 返回结果状态码，0为成功，非0为失败
+          format: int32
+          examples:
+            - 0
+        message:
+          type: string
+          description: 返回结果说明信息
+          examples:
+            - 执行成功
+        result:
+          description: 返回结果数据
+          $ref: '#/components/schemas/UserRegisterVO'
+        success:
+          type: boolean
+          description: 是否成功标志
+          examples:
+            - true
+        timestamp:
+          type: integer
+          description: 返回的时间戳
+          format: int64
+      description: 接口调用返回结果
+    UserRegisterVO:
+      title: UserRegisterVO
+      required:
+        - apiKey
+        - loginName
+      type: object
+      properties:
+        apiKey:
+          type: string
+          description: API密钥
+          examples:
+            - sk-123456
+        birthYear:
+          type: integer
+          description: 出生年份
+          format: int32
+          examples:
+            - 2000
+        createdTime:
+          type: string
+          description: 创建时间
+          format: date-time
+        email:
+          type: string
+          description: 电子邮箱
+          examples:
+            - hello@gmail.com
+        headerImgPath:
+          type: string
+          description: 头像地址
+          examples:
+            - http://baidu.com
+        lastLoginTime:
+          type: string
+          description: 最后登录时间
+          format: date-time
+        loginName:
+          type: string
+          description: 登录账号
+          examples:
+            - hello
+        modifiedTime:
+          type: string
+          description: 创建时间
+          format: date-time
+        phone:
+          type: string
+          description: 电话号码
+          examples:
+            - '18573294999'
+        sex:
+          type: integer
+          description: 性别：0-未知/1-男/2-女，默认值为0
+          format: int32
+          examples:
+            - 1
+      description: 用户注册信息
+    UserRegisterDTO:
+      title: UserRegisterDTO
+      required:
+        - loginName
+        - pwd
+      type: object
+      properties:
+        birthYear:
+          type: integer
+          description: 出生年份
+          format: int32
+          examples:
+            - 2000
+        email:
+          type: string
+          description: 电子邮箱
+          examples:
+            - hello@gmail.com
+        headerImgPath:
+          type: string
+          description: 头像地址
+          examples:
+            - http://baidu.com
+        loginName:
+          type: string
+          description: 登录账号
+          examples:
+            - hello
+        phone:
+          type: string
+          description: 电话号码
+          examples:
+            - '18573294999'
+        pwd:
+          type: string
+          description: 登录密码
+          examples:
+            - hello
+        sex:
+          type: integer
+          description: 性别：0-未知/1-男/2-女，默认值为0
+          format: int32
+          examples:
+            - 1
+      description: 用户注册参数
     AddRunwayTaskDTO:
       title: AddRunwayTaskDTO
       required:

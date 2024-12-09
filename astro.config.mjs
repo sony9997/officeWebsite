@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightOpenAPI, { openAPISidebarGroups } from 'starlight-openapi';
+import starlightImageZoom from 'starlight-image-zoom'
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,8 +17,9 @@ export default defineConfig({
 					  './src/content/schemas/api-service.yaml',
 				  },
 				]),
+				starlightImageZoom(),
 			],
-			title: 'QIMU',
+			title: 'Qimu',
 			description: '官网',
 			defaultLocale: 'zh-cn',
 			logo: {

@@ -1,0 +1,29 @@
+---
+title: 捐赠
+description: 介绍捐赠方式
+---
+
+import { Image } from 'astro:assets'
+import { Aside } from '@astrojs/starlight/components'
+import weixin from '../../../src/assets/pay-weixin.jpg'
+import zhifubao from '../../../src/assets/pay-zhifubao.jpg'
+import kofi from '../../../src/assets/pay-kofi.webp'
+
+
+<Aside type="tip">
+
+我这里的功能基本都是免费的，如果您觉得我做的还不错，可以请我喝杯咖啡，我将万分感谢！同时也欢迎您提出宝贵的建议和意见。
+
+</Aside>
+
+#### 微信支付
+<Image width={320} height={320} src={weixin} alt="微信支付" />
+
+#### 支付宝
+<Image width={320} height={320} src={zhifubao} alt="支付宝" />
+
+#### Ko-fi
+
+<a href='https://ko-fi.com/K3K5177S1N' target='_blank'>
+<Image src={kofi} alt="kofi" width={320} height={320} data-zoom-off/>
+</a>
