@@ -3,7 +3,11 @@
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
 ```
-npm create astro@latest -- --template starlight
+npm install -g cnpm --registry=https://registry.npmmirror.com
+cnpm create astro@latest -- --template starlight
+cnpm install starlight-image-zoom
+cnpm install starlight-openapi
+cnpm install starlight-showcases
 ```
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
